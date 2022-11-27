@@ -1,0 +1,48 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etch-A-Sketch</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+        <script src="script.js" defer></script> 
+    </head>
+
+    <body>
+        <!-- page title -->
+        <div class="title"></div>
+
+        <!-- controls and drawing pad-->
+        <div class="interface">
+
+            <div id="controls">
+                <div class="buttons">
+                    <button id="greyscale">Greyscale</button>
+                    <button id="pastel">Pastel</button>
+                    <button id="neutral">Neutral</button>
+                    <button id="clear">Clear</button>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="16" max="80" value="16" class="slider" id="grid-size">
+                    <p>Size: <span id="grid-output"></span></p>
+                </div>
+
+            </div>
+            
+
+            <div id="drawing-pad"></div>
+
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <p>Created by <b><a href="https://github.com/ajama19">ajama19</a></b></p>
+        </div>
+
+
+    </body>
+
+</html>

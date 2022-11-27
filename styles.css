@@ -1,0 +1,110 @@
+/* styles.css */
+
+body {
+    margin: 0 auto;
+    background-color: #4f4f55;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: VT323;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(238, 207, 255);
+    text-shadow: 0px 0px 8px #541d60;
+}
+
+.title {
+    background-image: url(images/title.png);
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 148px;
+}
+
+.interface {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+#drawing-pad {
+    background-color: white;
+    width: 50vw;
+    height: 50vw;
+
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e5e5e5;
+    width: 20vw;
+    justify-content: space-evenly;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+button {
+    font-family: VT323;
+    font-size: 45px;
+    background-color: #efefef;
+    border-color: #777777;
+    border-width: 2px;
+    border-style: solid;
+    padding: 0.391vw 0.625vw 0.391vw 0.625vw;
+}
+
+button:hover {
+    box-shadow: 0 0 8px #4f4f55;
+}
+
+.footer {
+    background-color: #e5e5e5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    font-size: 22px;
+    padding: 5px 0px;
+}
+
+/* button text colours*/
+#greyscale {
+    color: #777777;
+}
+
+#neutral {
+    color: #edd39b;
+}
+
+#pastel {
+    color: #f6ccff;
+    text-shadow: 0 0 10px  rgb(199, 232, 255);
+}
+
+/* Styling for smaller screens */
+@media only screen and (max-width: 590px) {
+    .title {
+        background-image: url(images/small-title.png);
+        background-repeat: no-repeat;
+        width: 150px;
+        height: 90px;
+        margin-top: 20px;
+        padding-bottom: 15px;
+    }
+
+
+  }
