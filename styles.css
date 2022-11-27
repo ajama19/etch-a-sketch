@@ -59,16 +59,24 @@ a:hover {
 
 button {
     font-family: VT323;
-    font-size: 45px;
+    font-size: 4vw;
     background-color: #efefef;
     border-color: #777777;
-    border-width: 2px;
+    border-width: 0.156vw;
     border-style: solid;
     padding: 0.391vw 0.625vw 0.391vw 0.625vw;
 }
 
 button:hover {
     box-shadow: 0 0 8px #4f4f55;
+}
+
+.slider {
+    width: 18vw;
+}
+
+#slider-output {
+    font-size: 3vw;
 }
 
 .footer {
