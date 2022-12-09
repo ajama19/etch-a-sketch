@@ -90,11 +90,20 @@ function updateGrid() {
 }
 
 
-//eraser event listener
+//eraser event listener 
+eraserBtn.addEventListener('click', () => {
+   colorPicker.value = '#ffffff';
+});
 
-
-//clear event listener
-
+//clear event listener (set all divs in div array background to white)
+clearBtn.addEventListener('click', () => {
+   //use node.firstchild, lastchild, nextsibling
+   let child = container.firstChild;
+   while (child != null) {
+      child.style.backgroundColor = '#ffffff';
+      child = child.nextSibling;
+   }
+});
 
 //colour picker event listener
 colorPicker.addEventListener('change', (event) => {
