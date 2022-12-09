@@ -11,7 +11,7 @@
 # Live Preview: 
 
 > \
-![Screenshot 2022-12-09 at 12-45-47 Pixel-Sketch](https://user-images.githubusercontent.com/49926354/206762735-2c33901b-4018-491f-8c0b-8080d93df16c.png)
+![Screenshot 2022-12-09 at 12-45-47 Pixel-Sketch](https://user-images.githubusercontent.com/49926354/206762869-4b315f9a-7ac8-4ef1-820c-7202a0b9c913.png)
 
 
 # Languages Used:
