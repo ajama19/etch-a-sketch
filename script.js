@@ -9,27 +9,24 @@ let eraserBtn = document.querySelector('#eraser'); // eraser button
 let gridSlider = document.querySelector('#grid-size'); // slider that changes size
 let gridSliderText = document.querySelector('#grid-output'); // text under slider
 
-
-
-// drawGrid() draws the initial grid that is responsive to clicks
+//drawGrid() draws a grid with cells that change colour when clicked
 function drawGrid() {
    const divArray = [];
    let lines = parseInt(gridSlider.value);
    let linesStr = '';
 
-   //our container has a display of grid so now create the columns and rows
+   //this for loop creates the columns and rows of the grid
    for (let i = 0; i < lines; i++) {
       linesStr += 'auto ';
    }
    container.style.gridTemplateColumns = linesStr;
    container.style.gridTemplateRows = linesStr;
 
-   //create a div and place it in the right grid-column-start/end and grid-row-start/end
-   //also add an event listener to the div and make it change colour on click
-   //num is used to create the right number of divs, for 5x5 that would be 25
+   //num is used to create the right number of divs, for 5x5 grid that would be 25
    let num = parseInt(gridSlider.value);
    num *= num;
 
+   //this for loop creates divs, and places them on the grid
    for (let i = 0; i < num; i++) {
       const box = document.createElement('div');
       box.classList.add('box');
@@ -39,7 +36,6 @@ function drawGrid() {
       divArray.push(box);
    }
 
-   // now use CSS Grid to place the divs from divArray in the right positions
    let gridLines = gridSlider.value; 
    let rowStart = 0;
    let rowEnd = 1;
@@ -47,18 +43,16 @@ function drawGrid() {
    let colEnd = 2;
    let index = 0;
 
-   // do a nested for loop with rows changing in the first, and col changing in the second
+   //the nested for loops place the divs from divArry on the grid
    for (let i = 0; i < gridLines; i++) {
       ++rowStart;
       ++rowEnd;
       for (let j = 0; j < gridLines; j++) {
-         divArray[index].style.gridRowStart = rowStart; //div item in array row start
+         divArray[index].style.gridRowStart = rowStart; 
          divArray[index].style.gridRowEnd = rowEnd;
-
          divArray[index].style.gridColumnStart = colStart;
          divArray[index].style.gridColumnEnd = colEnd;
 
-         //you have applied CSS so you must now append to container
          container.appendChild(divArray[index]);
          ++index;
          ++colStart;
@@ -70,7 +64,6 @@ function drawGrid() {
 }
 drawGrid();
 
-
 gridSliderText.textContent = gridSlider.value + " x " + gridSlider.value;
 //slider event listener 
 gridSlider.addEventListener('change', () => {
@@ -78,24 +71,20 @@ gridSlider.addEventListener('change', () => {
    updateGrid();
 });
 
-
 //updateGrid updates the grid dimensions when the slider is changed
 function updateGrid() {
-   //first erase divs from grid and from the divArray
    while (container.hasChildNodes()) {
       container.removeChild(container.lastChild);
    }
-   //then call drawGrid to draw the new grid
    drawGrid();
 }
 
-
-//eraser event listener 
+//eraser button event listener 
 eraserBtn.addEventListener('click', () => {
    colorPicker.value = '#ffffff';
 });
 
-//clear event listener (set all divs in div array background to white)
+//clear button event listener (set all divs in div array background to white)
 clearBtn.addEventListener('click', () => {
    //use node.firstchild, lastchild, nextsibling
    let child = container.firstChild;
