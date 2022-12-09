@@ -1,11 +1,6 @@
-# Introduction:
-
-> Introducting Pixel Sketch! You can use Pixel Sketch to draw pixel art right in your browser.
-
-
 # Background Information:
 
-> A cross between an Etch-A-Sketch and Sketchpad created to practice DOM manipulation.
+> Introducting Pixel Sketch, a cross between an Etch-A-Sketch and Sketchpad created to practice DOM manipulation. You can use Pixel Sketch to draw pixel art right in your browser.
 
 
 # Live Preview: 
