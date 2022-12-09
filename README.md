@@ -5,8 +5,9 @@
 
 # Live Preview: 
 
-> \
-![Screenshot 2022-12-09 at 12-45-47 Pixel-Sketch](https://user-images.githubusercontent.com/49926354/206762869-4b315f9a-7ac8-4ef1-820c-7202a0b9c913.png)
+> https://ajama19.github.io/pixel-sketch/ \
+
+![Screenshot 2022-12-09 at 18-41-53 Pixel-Sketch](https://user-images.githubusercontent.com/49926354/206812755-976e7a01-1677-41cf-91c2-b91cf33e57e8.png)
 
 
 # Languages Used:
