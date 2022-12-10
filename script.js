@@ -30,9 +30,7 @@ function drawGrid() {
    for (let i = 0; i < num; i++) {
       const box = document.createElement('div');
       box.classList.add('box');
-      box.addEventListener('click', (event) => {
-         event.target.style.backgroundColor = colorPicker.value;
-      });
+      box.addEventListener('mousedown', addColour);
       divArray.push(box);
    }
 
@@ -64,6 +62,17 @@ function drawGrid() {
 }
 drawGrid();
 
+
+//event function to make div background colour same as colour picker (for colouring)
+function addColour(event) {
+   event.target.style.backgroundColor = colorPicker.value;
+}
+
+//event function to make div background colour white (for eraser)
+function addEraser(event) {
+   event.target.style.backgroundColor = '#ffffff';
+}
+
 gridSliderText.textContent = gridSlider.value + " x " + gridSlider.value;
 //slider event listener 
 gridSlider.addEventListener('change', () => {
@@ -81,12 +90,16 @@ function updateGrid() {
 
 //eraser button event listener 
 eraserBtn.addEventListener('click', () => {
-   colorPicker.value = '#ffffff';
+   let child = container.firstChild;
+   while (child != null) {
+      child.removeEventListener('mousedown', addColour);
+      child.addEventListener('mousedown', addEraser);
+      child = child.nextSibling;
+   }
 });
 
 //clear button event listener (set all divs in div array background to white)
 clearBtn.addEventListener('click', () => {
-   //use node.firstchild, lastchild, nextsibling
    let child = container.firstChild;
    while (child != null) {
       child.style.backgroundColor = '#ffffff';
@@ -94,7 +107,16 @@ clearBtn.addEventListener('click', () => {
    }
 });
 
-//colour picker event listener
+//colour picker event listeners
 colorPicker.addEventListener('change', (event) => {
    colorText.textContent = event.target.value;
+});
+
+colorPicker.addEventListener('click', (event) => {
+   let child = container.firstChild;
+   while (child != null) {
+      child.removeEventListener('mousedown', addEraser);
+      child.addEventListener('mousedown', addColour);
+      child = child.nextSibling;
+   }
 });
