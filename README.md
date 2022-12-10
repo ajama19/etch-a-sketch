@@ -7,7 +7,7 @@
 
 > https://ajama19.github.io/pixel-sketch/ 
 
-![Screenshot 2022-12-09 at 18-41-53 Pixel-Sketch](https://user-images.githubusercontent.com/49926354/206812755-976e7a01-1677-41cf-91c2-b91cf33e57e8.png)
+![Screenshot 2022-12-10 at 13-32-35 Pixel-Sketch](https://user-images.githubusercontent.com/49926354/206870213-29d31d56-4ffa-4d2f-92ef-7d3f4b64e340.png)
 
 
 # Languages Used:
