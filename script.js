@@ -120,3 +120,29 @@ colorPicker.addEventListener('click', (event) => {
       child = child.nextSibling;
    }
 });
+
+//event listeners and functions for drawing while dragging the pressed mouse
+let mouseDown = 0; //false
+container.addEventListener('mousedown', function(event) {
+   ++mouseDown;
+   //if this is true then add mouseover option to divs
+   if (mouseDown) {
+      let child = container.firstChild;
+      while (child != null) {
+         child.addEventListener('mousemove', addColour);
+         child = child.nextSibling;
+      }
+   }
+
+});
+
+container.addEventListener('mouseup', function(event) {
+   if (mouseDown) {
+      --mouseDown;
+      let child = container.firstChild;
+      while (child != null) {
+         child.removeEventListener('mousemove', addColour);
+         child = child.nextSibling;
+      }
+   }
+});
