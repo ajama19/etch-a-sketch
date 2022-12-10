@@ -118,7 +118,7 @@ button:hover {
 
 /* styling for grid elements */
 .box {
-    border: solid black 1px;
+    border: solid rgb(74, 74, 74) 1px;
 }
 
 
